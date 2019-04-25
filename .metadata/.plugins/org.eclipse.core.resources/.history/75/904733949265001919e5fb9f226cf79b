@@ -1,0 +1,36 @@
+package cn.bingchuang.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cn.bingchuang.mapper.ChattingMapper;
+import cn.bingchuang.pojo.Chatting;
+
+@Service
+public class ChattingServiceImpl implements cn.bingchuang.service.ChattingService {
+	
+	@Autowired
+	private ChattingMapper chattingMapper;
+	
+	//发送信息(sender_id,send_message,send_date,receiver_id)
+	@Override
+	public boolean sendMassage(Chatting chatting) {
+		// TODO Auto-generated method stub
+		return chattingMapper.sendMassage(chatting);
+	}
+
+	//查询自己相关的消息
+	@Override
+	public List<Chatting> selectMassage(Integer id) {
+		// TODO Auto-generated method stub
+		return chattingMapper.selectMassage(id);
+	}
+	
+	//查询护士未读通知
+	@Override
+	public List<Chatting> findnotification(String senderId, String receiverId){
+		
+	}
+}

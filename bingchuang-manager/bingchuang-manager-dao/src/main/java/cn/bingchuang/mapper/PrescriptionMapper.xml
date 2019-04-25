@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- public class Prescription {
+	private int prescriptionId;
+	private int patientId;
+	private String prescriptionName;
+	private Date prescriptionDate;
+	private String prescriptionSrc;
+  -->
+<mapper namespace="cn.bingchuang.mapper.PrescriptionMapper">
+
+	<!-- 插入一条用药信息 -->
+	<insert id="addoneprescription" parameterType="cn.bingchuang.pojo.Prescription">
+		insert into prescription(patient_id,prescription_name,prescription_date,prescription_src)
+		values (#{patientId},#{prescriptionName},#{prescriptionDate},#{prescriptionSrc})
+	</insert>
+	
+	<!-- 查询所有的用药信息（bypatientid） -->
+	<select id="selectAllprescriptionbypatientid" parameterType="Integer"
+		resultType="cn.bingchuang.pojo.Prescription">
+		SELECT * FROM prescription WHERE patient_id=#{patientId} ORDER BY prescription_date
+	</select>
+</mapper>

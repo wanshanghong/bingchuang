@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bingchuang.mapper.VibrationMapper">
+	
+	
+	<!-- 插入震动数据 -->
+	<insert id="insertvibration"  parameterType="cn.bingchuang.pojo.Vibration">
+		insert into vibration(patient_id,vibration_data,vibration_time)
+		values (#{patientId},#{vibrationData},#{vibrationTime})
+	</insert>
+	
+	<!-- 查找全部病人震动数据 -->
+	<select id="selectallvibrationbyId" parameterType="Integer"
+		resultType="cn.bingchuang.pojo.Vibration">
+		select * from vibration where patient_id =#{patientId}
+	</select>
+	
+	<!-- 查询最新的一条震动信息(byId) -->
+	<select id="selectOnevibrationbyId" parameterType="Integer"
+		resultType="cn.bingchuang.pojo.Vibration">
+		SELECT * FROM vibration WHERE vibration.patient_id=#{patientId} ORDER BY vibration.vibration_data DESC LIMIT 1
+	</select>
+	
+</mapper>

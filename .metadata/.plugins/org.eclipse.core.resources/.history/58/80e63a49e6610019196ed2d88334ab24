@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- public class Chatting {
+	private int senderId;    //发送者id
+	private String senderName;    //发送者名字
+	private String sendMessage;		//发送信息
+	private Date sendDate;		//发送时间
+	private int receiverId;	//接收人id
+	private String receiverName;	//接收人信息-->
+	<!-- sender_id,send_message,send_date,receiver_id -->
+<mapper namespace="cn.bingchuang.mapper.ChattingMapper">
+	<!-- 发送信息 -->
+	<insert id="sendMassage" parameterType="cn.bingchuang.pojo.Chatting">
+		insert into chatting(sender_id,send_message,send_date,receiver_id)
+		values (#{senderId},#{sendMessage},#{sendDate},#{receiverId}
+	</insert>
+	
+	<!-- 查询自己相关的消息 -->
+	<select id="selectMassage" parameterType="Integer"
+		resultType="cn.bingchuang.pojo.Chatting">
+		SELECT * FROM(SELECT t3.sender_id,t4.sender_name,t3.send_message,t3.send_date,t3.receiver_id,t3.receiver_name FROM 
+		(SELECT t1.sender_id,t1.send_message,t1.send_date,t1.receiver_id,t2.receiver_name FROM (SELECT *FROM chatting WHERE sender_id=#{id} ) AS t1 
+		LEFT JOIN 
+		(SELECT administrator.administrator_id AS receiver_id,administrator.administrator_name AS receiver_name FROM administrator) AS t2 
+		ON t1.receiver_id=t2.receiver_id)
+		AS t3 
+		LEFT JOIN 
+		(SELECT administrator.administrator_id AS sender_id,administrator.administrator_name AS sender_name FROM administrator) AS
+		t4 ON t3.sender_id=t4.sender_id 
+		UNION
+		SELECT t3.sender_id,t4.sender_name,t3.send_message,t3.send_date,t3.receiver_id,t3.receiver_name FROM 
+		(SELECT t1.sender_id,t1.send_message,t1.send_date,t1.receiver_id,t2.receiver_name FROM (SELECT *FROM chatting WHERE receiver_id=#{id} ) AS t1 
+		LEFT JOIN 
+		(SELECT administrator.administrator_id AS receiver_id,administrator.administrator_name AS receiver_name FROM administrator) AS t2 
+		ON t1.receiver_id=t2.receiver_id)
+		AS t3 
+		LEFT JOIN 
+		(SELECT administrator.administrator_id AS sender_id,administrator.administrator_name AS sender_name FROM administrator) AS
+		t4 ON t3.sender_id=t4.sender_id ) AS t5 ORDER BY t5.send_date ASC
+	</select>
+</mapper>

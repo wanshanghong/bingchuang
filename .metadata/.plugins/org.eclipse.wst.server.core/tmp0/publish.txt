@@ -1,0 +1,8 @@
+#Tomcat publish data
+#Thu Apr 25 11:51:52 CST 2019
+org.eclipse.jst.j2ee.server\:bingchuang-manager-pojo=D\:\\apache-tomcat-8.5.38\\apache-tomcat-8.5.38\\webapps\\bingchuang-manager-web\\WEB-INF\\lib\\bingchuang-manager-pojo-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:/binary\:D\:\\Apache\\repository\\org\\springframework\\spring-web\\4.2.4.RELEASE\\spring-web-4.2.4.RELEASE.jar=D\:\\apache-tomcat-8.5.38\\apache-tomcat-8.5.38\\webapps\\bingchuang-manager-web\\WEB-INF\\lib\\spring-web-4.2.4.RELEASE.jar
+org.eclipse.jst.j2ee.server\:bingchuang-manager-interface=D\:\\apache-tomcat-8.5.38\\apache-tomcat-8.5.38\\webapps\\bingchuang-manager-web\\WEB-INF\\lib\\bingchuang-manager-interface-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:bingchuang-manager-dao=D\:\\apache-tomcat-8.5.38\\apache-tomcat-8.5.38\\webapps\\bingchuang-manager-web\\WEB-INF\\lib\\bingchuang-manager-dao-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.jee.server\:bingchuang-manager-web=D\:\\apache-tomcat-8.5.38\\apache-tomcat-8.5.38\\webapps\\bingchuang-manager-web
+org.eclipse.jst.j2ee.server\:bingchuang-manager-service=D\:\\apache-tomcat-8.5.38\\apache-tomcat-8.5.38\\webapps\\bingchuang-manager-web\\WEB-INF\\lib\\bingchuang-manager-service-0.0.1-SNAPSHOT.jar
