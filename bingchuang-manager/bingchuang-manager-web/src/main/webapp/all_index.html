@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>智能病床管理系统——显示患者信息</title>
+    <link rel="stylesheet" href="CSS/public.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/template.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/show_patient_info.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/show_patients_list.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/add_patients_info.css" type="text/css"/>
+    <script src="JS/template.js"></script>
+    <script src="JS/timer.js"></script>
+    <script src="JS/connect.js"></script>
+    <script src="JS/add_patient_info.js"></script>
+</head>
+<script>
+
+</script>
+<body>
+
+
+<header class="template">
+    <img style="display:block;float:left;width:40px;height:40px;position:relative;left:30px;top:20px;" src="images/logo.png" alt=""/>
+    <h3>智能病床管理系统</h3>
+    <a href="#" onclick="change_function(this)" id="index_html"><img style="display:block;float:right;width:20px;height:20px;position:relative;right:100px;top:45px;" src="images/HomePage.png" alt="返回首页"/></a>
+    <a href="login.html"><img style="display:block;float:right;width:20px;height:20px;position:relative;right:40px;top:46px;" src="images/logout.png" alt="注销"/></a>
+</header>
+<section class="welcome">
+    <img style="width:20px;height:20px;margin:5px;float:left;" src="images/admin.png" alt="">
+    <span>欢迎您！超级管理员</span>
+    <span class="timer" id="timer"></span>
+</section>
+<div class="content">
+    <div class="menu" id="menu">
+        <h4>导航菜单</h4>
+        <ul id="menu-content">
+            <li class="patient_management li" id="patient_management" onclick="Menu(this)" ><img class="img1" src="images/patients.png" alt="" /><span>病人信息管理</span><img class="img2" src="images/icon1.png" alt="展开"></li>
+            <li class="inner_box" id="inner_box1" >
+                <ul>
+                    <li><a href="#" onclick="change_function(this)" id="show_patient_info"><img class="arror" src="images/arror.png" alt=""/><span>查看患者信息</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                    <li><a href="#" onclick="change_function(this)" id="add_patient_info"><img class="arror" src="images/arror.png" alt=""/><span>添加患者信息</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                </ul>
+            </li>
+            <li class="account_management li" id="account_management"   onclick="Menu(this)"><img class="img1" src="images/patients.png" alt=""/><span>账号信息管理</span><img class="img2" src="images/icon1.png" alt="展开"></li>
+            <li class="inner_box" id="inner_box2" >
+                <ul>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>查看账号信息</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>修改账号信息</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                </ul>
+            </li>
+            <li class="help_center li" id="help_center" onclick="Menu(this)"><img class="img1" src="images/patients.png" alt="" /><span>帮助中心</span><img class="img2" src="images/icon1.png" alt="展开"></li>
+            <li class="inner_box" id="inner_box3" >
+                <ul>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>关于我们</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>联系我们</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="r1"></div>
+    <div style="display:none;" class="show_section show_patient_info_main1" id="show_patient_info__main1">
+        <div class="c1"></div>
+        <div class="main_section1" id="main_section1">
+            <div class="c3"></div>
+            <img  src="images/patient-list.png" style="width:30px;height:30px;display:block;float:left;" alt="" />
+            <p style="font:500 16px/35px “微软雅黑”;color: rgb(62, 135, 202);">患者信息</p>
+            <div class="c2"></div>
+            <div class="show_patient">
+                <table style="border-collapse: collapse;" class="table">
+                    <tbody>
+                    <tr>
+                        <td rowspan="3" class="patient_img" id="patientPhoto"></td>
+                        <td><span class="span1">姓名：</span><span class="span2" id="patientName"></span></td>
+                        <td><span class="span1">入院时间：</span><span class="span2" id="admissionTime"></span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="span1">ID：</span><span class="span2" id="patientId"></span></td>
+                        <td><span class="span1">病症：</span><span class="span2" id="diseaseInformation" ></span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="span1">地址：</span><span class="span2" id="patientAddress"></span></td>
+                        <td><span class="span1">身份证号：</span><span class="span2" id="patientIdcard"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table2">
+                    <tbody>
+                    <tr>
+                        <td><img src="images/temperature.png" alt=""/><span>患者体温</span><span id="temp"></span></td>
+                        <td><img src="images/transfuse.png" alt=""/><span>输液状态</span><span id="lData"></span></td>
+                        <td><img src="images/collision.png" alt=""/><span>尿床情况</span><span id="uData"></span></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/medicine.png" alt=""/><span>用药时间</span><span id="prescriptionDate"></span></td>
+                        <td><img src="images/note.png" alt=""/><span>用药准则</span><span id="prescriptionSrc"></span></td>
+                        <td><img src="images/patient.png" alt=""/><span>患者状态</span><span id="zhuangtai">1</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div style="display:none;" class="show_section add_patient_info_main1" id="add_patient_info_main1">
+        <div class="c1"></div>
+        <div class="main_section1">
+            <div class="c3"></div>
+            <img src="images/patient-list.png" style="width:30px;height:30px;display:block;float:left;" alt="" />
+            <p style="font:500 16px/35px “微软雅黑”;color: rgb(62, 135, 202);">添加患者信息</p>
+            <div class="c2"></div>
+            <div class="patient_info">
+                <div class="header">
+                    <form enctype="multipart/form-data" id="form1">
+                        <div  id="patient_img" class="patient_img">
+                            <input id="file" class="inputfile" onchange="changepic(this)" name="patientPhoto" type="file" accept="image/png, image/jpeg, image/gif, image/jpg"><br>
+                            <label for="file" ><img id="show" class="btn" src=""  alt=""/></label>
+                        </div>
+                        <div class="patient_information">
+                            <table style="border-collapse: collapse">
+                                <tr class="patient_tr">
+                                    <td><label><span>姓名：</span><input name="patientName" id="add_name" type="text" autocomplete="off"/></label></td>
+                                    <td><label><span>性别：</span><input name="patientSex" id="add_sex" type="text" autocomplete="off"/></label></td>
+                                    <td><label><span>ID：</span><input name="patientId" id="add_ID" type="text"  autocomplete="off"/></label></td>
+                                    <td><label><span>病症：</span><input name="diseaseInformation" id="add_dis" type="text" autocomplete="off"/></label></td>
+                                    <td><label><span>地址：</span><input name="patientAddress" id="add_address" type="text" autocomplete="off" /></label></td>
+                                    <td><label><span>身份证号：</span><input name="patientIdcard" id="add_connect" type="text" autocomplete="off" /></label></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer"><div class="save" onclick="add_patient()">保存</div></div>
+            </div>
+        </div>
+    </div>
+    <div style="display:block;" class="show_section show_patient_list_main1" id="show_patient_list_main1">
+        <div class="c1"></div>
+        <div class="main_section1">
+            <div class="c3"></div>
+            <img src="images/patient-list.png" style="width:30px;height:30px;display:block;float:left;" alt="" />
+            <p style="font:500 16px/35px “微软雅黑”;color: rgb(62, 135, 202);">患者列表</p>
+            <div class="c2"></div>
+            <div class="form1">
+                <div class="query">
+                    <label><input type="text" placeholder="请输入患者ID" /><div class="btn" onclick="query()">按ID查找</div></label>
+                    <label><input type="text" placeholder="请输入患者姓名"/><div class="btn" onclick="query()">按姓名查找</div></label>
+                </div>
+                <div class="table">
+                    <table style="border-collapse: collapse;">
+                        <thead>
+                        <tr>
+                            <td><label><input type="checkbox"  id="all_check_btn" onclick="is_selected()"/>全选</label></td>
+                            <td>患者ID</td>
+                            <td>姓名</td>
+                            <td>地址</td>
+                            <td>入院时间</td>
+                            <td class="final"></td>
+                        </tr>
+                        </thead>
+                        <tbody id="patients">
+<!--                        <tr class="patient">-->
+<!--                            <td><input class="patient_input" type="checkbox" /></td>-->
+<!--                            <td>32501</td>-->
+<!--                            <td>李华</td>-->
+<!--                            <td>惠城区演达大道</td>-->
+<!--                            <td>2019.04.22</td>-->
+<!--                            <td class="final">-->
+<!--                                <label class="update"><img  src="images/update.png" alt=""/><input type="button" value="修改" onclick="updatePatient(this)"/></label>-->
+<!--                                <label class="delete"><img  src="images/delete.png" alt=""/><input type="button" value="删除" onclick = "delectPatient(this)"/></label>-->
+<!--                            </td>-->
+<!--                        </tr>-->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="data-nav">
+                    <ul>
+                        <li class="nav-item first-item">上一页</li>
+                        <li class="nav-item cur">1</li>
+                        <li class="nav-item">2</li>
+                        <li class="nav-item">3</li>
+                        <li class="nav-item">4</li>
+                        <li class="nav-item">5</li>
+                        <li class="nav-item final-item">下一页</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="r1"></div>
+    <aside>
+        <div class="c1"></div>
+        <div style="display:none;" class="main_section2 show_patient_info_main2" id="show_patient_info_main2">
+            <div class="relative">
+                <img src="images/package.png" style="width:20px;height:20px;position: relative;top:3px;left:5px;" alt="相关文件"/>
+                <span>&nbsp;&nbsp;家属对话框</span>
+                <div class="c2"></div>
+                <div class="c3"></div>
+                <label><textarea id="message" class="chat" placeholder="请输入..."></textarea></label>
+                <div class="two_button">
+                    <input type="button" value="查看历史">
+                    <input type="submit" value="点击发送" onclick="sendMessage()">
+                </div>
+                <div class="c3"></div>
+                <div class="c3"></div>
+                <img src="images/package.png" style="width:20px;height:20px;position: relative;top:3px;left:5px;" alt="相关文件"/>
+                <span>&nbsp;&nbsp;相关文件</span>
+                <div class="c2"></div>
+                <ul class="patient_health">
+                    <li><img src="images/Health_Package%20.png" alt=""><p>健康档案&nbsp;&nbsp;&nbsp;&nbsp;</p></li>
+                    <li><img src="images/data.png" alt=""><p>健康数据&nbsp;&nbsp;&nbsp;&nbsp;</p></li>
+                    <li><img src="images/test.png" alt=""><p>就诊记录&nbsp;&nbsp;&nbsp;&nbsp;</p></li>
+                </ul>
+
+            </div>
+        </div>
+        <div style="display:block;" class="main_section2 add_patient_info_main2" id="add_patient_info_main2">
+            <div class="relative">
+                <img src="images/package.png" style="width:20px;height:20px;position: relative;top:3px;left:5px;" alt="相关文件"/>
+                <span>&nbsp;&nbsp;最新消息通知</span>
+                <div class="c2"></div>
+                <div class="c3"></div>
+                <ul class="patient_warn" id="patient_warn"></ul>
+            </div>
+        </div>
+    </aside>
+</div>
+<footer><span>@ Created by the best cute shaomin</span></footer>
+
+</body>
+</html>

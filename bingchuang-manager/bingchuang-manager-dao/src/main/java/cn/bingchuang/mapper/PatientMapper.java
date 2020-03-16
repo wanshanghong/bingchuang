@@ -4,6 +4,7 @@ import java.util.List;
 
 import cn.bingchuang.pojo.Patient;
 
+//病人模块的Dao层
 public interface PatientMapper {
 	
 	//添加病人

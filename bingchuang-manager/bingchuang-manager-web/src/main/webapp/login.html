@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="CSS/public.css"/>
+    <link rel="stylesheet" href="CSS/login.css"/>
+    <script rel="stylesheet" src="JS/Login.js"></script>
+</head>
+<body>
+    <div class="c4"></div>
+    <form action="" method="get" name="login" accept-charset="">
+        <h4>&nbsp;&nbsp;&nbsp;用户登录</h4>
+        <div><label><span>用户名 ：</span><input id="username"  type="text" placeholder="" value=""  autocomplete="off"></label></div>
+        <div><label><span>密  码 ：</span><input id="password" type="password" placeholder="" value="" /></label></div>
+        <div><label><span>验证码 ：</span><input id="inputCode" class="yanzheng" type="text" /></label><div id="checkCode" class="code" onclick="createCode(4)" ></div></div>
+        <div class="warn" id="warn" ></div>
+        <div>
+            <span></span>
+            <input class="login" id="login" type="button" value="登录" onclick="check()"/>
+            <input class="sign" id="sign" type="button" value="注册" onclick="" />
+        </div>
+    </form>
+</body>
+</html>
+<script src="JS/RandPassword.js"></script>

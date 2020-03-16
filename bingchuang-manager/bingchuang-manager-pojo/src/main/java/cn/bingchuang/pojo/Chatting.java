@@ -2,6 +2,7 @@ package cn.bingchuang.pojo;
 
 import java.util.Date;
 
+//通知的javabean
 public class Chatting {
 	private int senderId;    //发送者id
 	private String senderName;    //发送者名字

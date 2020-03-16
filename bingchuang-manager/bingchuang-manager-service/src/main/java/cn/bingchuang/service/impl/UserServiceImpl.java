@@ -10,8 +10,10 @@ import cn.bingchuang.mapper.UserMapper;
 import cn.bingchuang.pojo.User;
 import cn.bingchuang.service.UserService;
 
+//用户User模块的Service层实现类
 @Service
 public class UserServiceImpl implements UserService{
+	//注解   获取UserMapper
 	@Autowired
 	private UserMapper userMapper;
 	
@@ -27,6 +29,7 @@ public class UserServiceImpl implements UserService{
 	public User loginUser(String userName, String userPassword)
 	{
 		// TODO Auto-generated method stub
+		//将数据封装成为一个map
 		Map<String,String> map = new HashMap<String, String>();		
 		map.put("userName",userName);		
 		map.put("userPassword", userPassword);	

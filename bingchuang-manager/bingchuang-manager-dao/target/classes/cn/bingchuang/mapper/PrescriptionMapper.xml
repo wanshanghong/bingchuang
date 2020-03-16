@@ -2,13 +2,6 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- public class Prescription {
-	private int prescriptionId;
-	private int patientId;
-	private String prescriptionName;
-	private Date prescriptionDate;
-	private String prescriptionSrc;
-  -->
 <mapper namespace="cn.bingchuang.mapper.PrescriptionMapper">
 
 	<!-- 插入一条用药信息 -->

@@ -4,6 +4,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 <settings>
+	<!-- 设置数据库的下横杆在java项目的大写转换 -->
 	<setting name="mapUnderscoreToCamelCase" value="true"/>
 </settings>
 

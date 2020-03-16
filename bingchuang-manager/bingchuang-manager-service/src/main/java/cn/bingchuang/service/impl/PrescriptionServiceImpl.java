@@ -9,9 +9,10 @@ import cn.bingchuang.mapper.PrescriptionMapper;
 import cn.bingchuang.pojo.Prescription;
 import cn.bingchuang.service.PrescriptionService;
 
-
+//用药模块的Service层实现类
 @Service
 public class PrescriptionServiceImpl implements PrescriptionService {
+	//注解 获取Dao层的PrescriptionMapper
 	@Autowired
 	private  PrescriptionMapper prescriptionMapper;
 	

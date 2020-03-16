@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bingchuang.mapper.SensorsMapper">
+	
+	<!-- 液位传感器（数据传入） -->
+	<insert id="AddLiquid"  parameterType="cn.bingchuang.pojo.Liquid">
+		insert into liquid(pid,l_data,l_time)
+		values (#{pid},#{lData},#{lTime})
+		ON DUPLICATE KEY UPDATE 
+		`l_data`=#{lData},`l_time`=#{lTime}  
+	</insert>
+	<!-- 查找液位传感器数据,传到移动终端 -->
+	<select id="FindLiquidById" parameterType="Integer"
+		resultType="cn.bingchuang.pojo.Liquid">
+		select * from liquid where pid =#{pid}
+	</select>
+	
+	<!-- 温度传感器（数据传入)-->
+	<insert id="AddTemperature"  parameterType="cn.bingchuang.pojo.Temperature">
+		insert into temperature(patient_id,temp,date)
+		values (#{patientId},#{temp},#{date})
+		ON DUPLICATE KEY UPDATE 
+		`temp`=#{temp},`date`=#{date}
+	</insert>
+
+	<!-- 查找温度传感器数据,传到移动终端 -->
+	<select id="SelectTemperatureById" parameterType="Integer"
+	resultType="cn.bingchuang.pojo.Temperature">
+	 	SELECT * FROM temperature WHERE temperature.patient_id=#{patientId}
+	</select>
+	
+	<!-- 温度传感器（数据传入)-->
+	<insert id="AddUrine"  parameterType="cn.bingchuang.pojo.Urine">
+		insert into urine(p_id,u_data,u_time)
+		values (#{pId},#{uData},#{uTime})
+		ON DUPLICATE KEY UPDATE 
+		`u_data`=#{uData},`u_time`=#{uTime}
+	</insert>
+
+	<!-- 查找温度传感器数据,传到移动终端 -->
+	<select id="SelectUrineById" parameterType="Integer"
+	resultType="cn.bingchuang.pojo.Urine">
+	 	SELECT * FROM urine WHERE urine.p_id=#{pId}
+	</select>
+</mapper>

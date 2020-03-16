@@ -2,6 +2,7 @@ package cn.bingchuang.pojo;
 
 import java.util.Date;
 
+//吃药准则javabean
 public class Prescription {
 	private int prescriptionId;  	 //药id
 	private int patientId;			 //病人id

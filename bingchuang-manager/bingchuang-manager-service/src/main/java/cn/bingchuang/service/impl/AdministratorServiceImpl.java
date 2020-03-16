@@ -10,6 +10,7 @@ import cn.bingchuang.mapper.AdministratorMapper;
 import cn.bingchuang.pojo.Administrator;
 import cn.bingchuang.service.AdministratorService;
 
+//管理员模块的Service层实现类
 @Service
 public class AdministratorServiceImpl implements AdministratorService {
 	

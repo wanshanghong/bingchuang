@@ -1,5 +1,6 @@
 package cn.bingchuang.pojo;
 
+//用户javabean
 public class User {
 	private int userId;					//用户id
 	private String userName;			//用户名字

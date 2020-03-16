@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import cn.bingchuang.mapper.ChattingMapper;
 import cn.bingchuang.pojo.Chatting;
 
+//通知模块的Service层实现类
 @Service
 public class ChattingServiceImpl implements cn.bingchuang.service.ChattingService {
 	
@@ -46,5 +47,15 @@ public class ChattingServiceImpl implements cn.bingchuang.service.ChattingServic
 		}else{
 			return null;
 		}
+	}
+
+	// 查询护士的通知信息(不排除已读）
+	@Override
+	public List<Chatting> findnotificationignoreread(String senderId, String receiverId) {
+		// TODO Auto-generated method stub
+		Map<String,String> map = new HashMap<String, String>();		
+		map.put("senderId",senderId);		
+		map.put("receiverId", receiverId);	
+		return chattingMapper.findnotificationignoreread(map);
 	}
 }

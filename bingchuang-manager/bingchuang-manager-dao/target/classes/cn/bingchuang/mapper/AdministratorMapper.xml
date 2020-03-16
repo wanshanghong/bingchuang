@@ -2,13 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- 写Sql语句  
-private int administratorId;		//管理员ID
-	private int administratorName;      //管理员名字
-	private int administratorPassword;	//管理员密码 
-	-->
 <mapper namespace="cn.bingchuang.mapper.AdministratorMapper">
-
 	<!-- 管理员注册 -->
 	<insert id="addadministrator"  parameterType="cn.bingchuang.pojo.Administrator">
 		<selectKey keyProperty="administratorId" resultType="Integer" order="AFTER">

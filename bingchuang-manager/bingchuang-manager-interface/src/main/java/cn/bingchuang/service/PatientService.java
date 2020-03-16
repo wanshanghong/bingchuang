@@ -4,6 +4,7 @@ import java.util.List;
 
 import cn.bingchuang.pojo.Patient;
 
+//病人 模块的Service层接口类
 public interface PatientService {
 		
 	//添加病人

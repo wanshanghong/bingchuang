@@ -1,0 +1,152 @@
+.show_patient{
+    width:90%;
+    height:75%;
+    margin:0 auto;
+    padding-top:30px;
+}
+.show_section .main_section1 .show_patient .table{
+    width:100%;
+    margin:0 auto;
+}
+.show_section .main_section1 .show_patient .table td{
+    height:30px;
+    width:200px;
+    /*border:1px solid #ccc;*/
+    text-align:left;
+}
+.show_section .main_section1 .show_patient .table .patient_img{
+    position:relative;
+    width:105px;
+    height:180px;
+    background: url("../images/patient_img.jpg") no-repeat center;
+    background-size:100%;
+
+}
+.show_section .main_section1 .show_patient .table span{
+    margin-left: 10px;
+}
+.span1{
+    float:left;
+    width:80px;
+    text-align:right;
+}
+.span2{
+    float:left;
+    width:190px;
+    text-align: left;
+    overflow: hidden;
+}
+.show_section .main_section1 .show_patient .table2{
+    width:100%;
+    margin-top:50px;
+}
+.show_section .main_section1 .show_patient .table2 tr{
+    height:100px;
+    /*background-color: #fbedce;*/
+}
+.show_section .main_section1 .show_patient .table2 tr td{
+    position:relative;
+    width:33%;
+}
+.show_section .main_section1 .show_patient .table2 tr td img{
+    position:absolute;
+    left:30px;
+    top:23px;
+    width:50px;
+    height:50px;
+}
+
+.show_section .main_section1 .show_patient .table2 tr td span{
+    text-align:center;
+    display: block;
+    width:100%;
+    height:50%;
+}
+
+
+.content aside{
+    width:20%;
+    height:100%;
+    display:block;
+    float:right;
+
+}
+.content aside .main_section2{
+    width:100%;
+    height:98%;
+    border: 1px solid rgb(221,224,229);
+    background-color: rgb(244,243,241);
+}
+.content aside .relative{
+    margin-top:3px;
+    position:relative;
+}
+.content aside .relative span{
+    font:500 16px/30px "微软雅黑";
+    color: rgb(62, 135, 202);
+}
+
+aside ul{
+    width:100%;
+    height:210px;
+}
+aside .patient_health li{
+    display:block;
+    float:left;
+    width:50%;
+    height:50%;
+    list-style:none;
+}
+aside .relative ul img{
+    width:50px;
+    height:50px;
+    margin:30px 0 0 30px;
+}
+aside .relative ul p{
+    font: 400 14px/20px "微软雅黑";
+    color:#111;
+    text-align:center;
+}
+
+aside .chat{
+    display:block;
+    width: 240px;
+    height:120px;
+    margin:0 auto;
+    border:1px solid #eee;
+    font:400 14px/30px "宋体";
+    color:#666;
+    background-color: #eee;
+    resize: none;
+}
+textarea:focus{
+    outline:none !important;
+    border-color:white;
+    box-shadow:0 0 10px white;
+}
+input:focus{
+    outline:none !important;
+    border: 0;
+}
+
+aside .two_button{
+    display:block;
+    width:240px;
+    height:30px;
+    margin:0 auto;
+}
+
+aside input{
+    display:block;
+    float:left;
+    width:120px;
+    height:100%;
+    text-align:center;
+    font:400 14px/30px "微软雅黑";
+    color:#111;
+    border:1px solid #eeeeee;
+    border-radius:2px;
+}
+input:active{
+    background-color: #e1e1e1;
+}

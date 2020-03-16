@@ -2,10 +2,11 @@ package cn.bingchuang.pojo;
 
 import java.util.Date;
 
+//温度javabean
 public class Temperature {
-	private int patientId;
-	private double temp;
-	private Date date;
+	private int patientId;   //病床ID
+	private double temp;	//温度数据
+	private Date date;		//时间
 	public int getPatientId() {
 		return patientId;
 	}

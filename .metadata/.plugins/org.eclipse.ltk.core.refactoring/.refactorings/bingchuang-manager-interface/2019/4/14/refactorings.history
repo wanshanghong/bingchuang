@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;bingchuang-manager-interface&apos;&#x0D;&#x0A;- Original project: &apos;bingchuang-manager-interface&apos;&#x0D;&#x0A;- Original element: &apos;bingchuang-manager-interface/src/main/java/cn.bingchuang.service.impl&apos;" description="Delete element" element1="/src\/main\/java&lt;cn.bingchuang.service.impl" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1554177450601" subPackages="false" version="1.0"/>
-</session>

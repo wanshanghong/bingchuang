@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;bingchuang-manager-web/src/main/webapp/WEB_INF&apos; to &apos;WEB-INF&apos;" description="Rename resource &apos;WEB_INF&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB_INF" name="WEB-INF" stamp="1553531309504" updateReferences="true"/>
-</session>

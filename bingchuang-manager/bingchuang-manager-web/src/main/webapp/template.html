@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+    <link rel="stylesheet" href="CSS/public.css" type="text/css"/>
+    <link rel="stylesheet" href="CSS/template.css" type="text/css"/>
+    <script src="JS/template.js"></script>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+
+<header class="template">
+    <img style="display:block;float:left;width:40px;height:40px;position:relative;left:30px;top:20px;" src="images/logo.png" alt=""/>
+    <h3>智能病床管理系统</h3>
+    <a href="#"><img style="display:block;float:right;width:20px;height:20px;position:relative;right:100px;top:45px;" src="images/HomePage.png" alt="返回首页"/></a>
+    <a href="login.html"><img style="display:block;float:right;width:20px;height:20px;position:relative;right:40px;top:46px;" src="images/logout.png" alt="注销"/></a>
+</header>
+<section class="welcome">
+    <img style="width:20px;height:20px;margin:5px;float:left;" src="images/admin.png" alt="">
+    <span>欢迎您！超级管理员</span>
+    <span class="timer" id="timer"></span>
+</section>
+<div class="content">
+    <div class="menu" id="menu">
+        <h4>导航菜单</h4>
+        <ul id="menu-content">
+            <li class="patient_management li" id="patient_management" onclick="Menu(this)" ><img class="img1" src="images/patients.png" alt="" /><span>病人信息管理</span><img class="img2" src="images/icon1.png" alt="展开"></li>
+            <li class="inner_box" id="inner_box1" >
+                <ul>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>查看患者信息</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>添加患者信息</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                </ul>
+            </li>
+            <li class="account_management li" id="account_management"   onclick="Menu(this)"><img class="img1" src="images/patients.png" alt=""/><span>账号信息管理</span><img class="img2" src="images/icon1.png" alt="展开"></li>
+            <li class="inner_box" id="inner_box2" >
+                <ul>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>查看账号信息</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>修改账号信息</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                </ul>
+            </li>
+            <li class="help_center li" id="help_center" onclick="Menu(this)"><img class="img1" src="images/patients.png" alt="" /><span>帮助中心</span><img class="img2" src="images/icon1.png" alt="展开"></li>
+            <li class="inner_box" id="inner_box3" >
+                <ul>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>关于我们</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                    <li><a href="#"><img class="arror" src="images/arror.png" alt=""/><span>联系我们</span></a><p>. . . . . . . . . . . . . . . . . .</p></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="r1"></div>
+<!--    <div class="show_section">-->
+<!--        <div class="c1"></div>-->
+<!--&lt;!&ndash;        <div class="main_section1">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="c3"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img src="images/patient-list.png" style="width:30px;height:30px;display:block;float:left;" alt="" />&ndash;&gt;-->
+<!--&lt;!&ndash;            <p style="font:500 16px/35px “微软雅黑”;color: rgb(62, 135, 202);">患者信息</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="c2"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <iframe class=main_section1 src="show_patient_info.html" scrolling="no"></iframe>-->
+<!--    </div>-->
+    <iframe class="show_section" src="show_patient_info.html" scrolling="no"></iframe>-->
+    <div class="r1"></div>
+    <aside>
+        <div class="c1"></div>
+        <div class="main_section2">
+            <div class="relative">
+                <img src="images/package.png" style="width:20px;height:20px;position: relative;top:3px;left:5px;" alt="相关文件"/>
+                <span>&nbsp;&nbsp;家属对话框</span>
+                <div class="c2"></div>
+                <div class="c3"></div>
+            </div>
+        </div>
+    </aside>
+</div>
+<footer><span>@ Created by the best cute shaomin</span></footer>
+</body>
+</html>

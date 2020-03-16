@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 8 resources" deleteContents="false" description="Delete 8 resources" element1="/bingchuang-common" element2="/bingchuang-manager" element3="/bingchuang-manager-dao" element4="/bingchuang-manager-interface" element5="/bingchuang-manager-pojo" element6="/bingchuang-manager-service" element7="/bingchuang-manager-web" element8="/bingchuang-parent" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="8" stamp="1553688538258"/>
-</session>

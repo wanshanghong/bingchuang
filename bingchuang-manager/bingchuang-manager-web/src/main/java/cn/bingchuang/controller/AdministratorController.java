@@ -10,13 +10,13 @@ import cn.bingchuang.pojo.Administrator;
 import cn.bingchuang.service.AdministratorService;
 import net.sf.json.JSONObject;
 
+//管理员模块的Controller层
 @Controller
 public class AdministratorController {
-	
+	//注解获取AdministratorService
 	@Autowired
 	private AdministratorService administratorService;
 		
-	
 	//管理员注册
 	@RequestMapping("register.action")
 	@ResponseBody
@@ -34,7 +34,6 @@ public class AdministratorController {
 		return json.toString();
 	}
 	
-	
 	//管理员登录
 	@RequestMapping("login.action")
 	@ResponseBody
@@ -48,5 +47,5 @@ public class AdministratorController {
 		System.out.println("管理员登录成功.....返回结果"+json.toString());
 		return json.toString();
 	}
-	
+		
 }

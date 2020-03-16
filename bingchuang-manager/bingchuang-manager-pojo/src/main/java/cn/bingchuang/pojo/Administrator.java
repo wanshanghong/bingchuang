@@ -1,5 +1,6 @@
 package cn.bingchuang.pojo;
 
+//管理员的javabean
 public class Administrator {
 	private int administratorId;		//管理员ID
 	private String administratorName;      //管理员名字

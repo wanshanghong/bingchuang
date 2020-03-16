@@ -14,17 +14,13 @@ import cn.bingchuang.service.PrescriptionService;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
+//用药模块的Controller层
 @Controller
 public class PrescriptionController {
 	@Autowired
 	private PrescriptionService prescriptionService;
 	
-	/**public class Prescription {
-	private int prescriptionId;
-	private int patientId;
-	private String prescriptionName;
-	private Date prescriptionDate;
-	private String prescriptionSrc;*/
+	
 	//插入一条用药信息
 	@RequestMapping("addprescription.action")
 	@ResponseBody

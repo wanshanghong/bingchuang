@@ -2,21 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- public class Patient {
-	private int patientId;              //病人ID/床号
-	private String patientName;         //病人名字
-	private String patientSex;          //病人性别
-	private int patientAge;             //病人年龄
-	private String patientIdcard;       //病人身份证
-	private String patientAddress;      //病人家庭地址
-	private int patientPhone;           //病人电话
-	private String diseaseInformation;  //病症信息
-	private Date  admissionTime;	    //入院时间
-	private String hospitalName;        //医院名称
-	private String patientPhoto;        //病人头像 -->
 <mapper namespace="cn.bingchuang.mapper.PatientMapper">
-
-	
 	<!-- 添加病人 -->
 	<insert id="addpatient"  parameterType="cn.bingchuang.pojo.Patient" >
 		<selectKey keyProperty="patientId" resultType="Integer" order="AFTER">

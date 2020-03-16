@@ -2,6 +2,7 @@ package cn.bingchuang.pojo;
 
 import java.util.Date;
 
+//患者javabean
 public class Patient {
 	private int patientId;              //病人ID/床号
 	private String patientName;         //病人名字
